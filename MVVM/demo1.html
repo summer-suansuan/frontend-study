@@ -10,16 +10,18 @@
 		name: 'huanghui',
 		age: 23
 	}
-	Object.defineProperty(obj, 'name', {
+	//属性 __proto__ 隐藏属性 不可枚举 钩子函数
+	//描述对象 Object 本地的构造函数 灵活性 弱类型
+	Object.defineProperty(obj, 'name', {   //描述对象
 		get: function(){
 			return this.value;
 		},
 		set: function(data){
-			this.value = data;
+			this.value = data;  //移花接木
 		}
 	});
-	obj.name = "xxxx";
-	console.log(obj.name);
+	obj.name = "xxxx";   //set
+	console.log(obj.name); //get
 	</script>
 </body>
 </html>
