@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var obj = {
+		name: 'huanghui',
+		age: 23
+	}
+	Object.defineProperty(obj, 'name', {
+		get: function(){
+			return this.value;
+		},
+		set: function(data){
+			this.value = data;
+		}
+	});
+	obj.name = "xxxx";
+	console.log(obj.name);
+	</script>
+</body>
+</html>

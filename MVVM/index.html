@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mvvm源码学习</title>
+	<script src="./vue-1.1.0.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="message">
+		<p v-model="message"></p>
+		<input type="text" v-model="text">
+		<p v-model="text"></p>
+	</div>
+	<script type="text/javascript">
+
+	var obj = {
+		el: '#app',
+		data: {
+			message: "huanghui",
+			text: "xxx"
+		}
+	}
+	var vue = new Vue(obj)
+	obj.data.message = "11dafadf"
+	console.log(vue)
+	
+	</script>
+</body>
+</html>
